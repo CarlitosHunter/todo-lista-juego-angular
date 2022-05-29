@@ -1,0 +1,16 @@
+<form *ngIf="showAddTask" class="add-form" (ngSubmit)="onSubmit()">
+    <div class="form-control">
+        <label for="text">Nombre de Juego</label>
+        <input type="text" name="text" id="text" [(ngModel)]="text" placeholder="Añadir Juego"/>
+    </div>
+    <div class="form-control">
+        <label for="day">La fecha de lanzameinto</label>
+        <input type="text" name="day" id="day" [(ngModel)]="day"placeholder="Añadir la fecha"/>
+    </div>
+    <div class="form-control form-control-check">
+        <label for="reminder">Establecer el recordatorio</label>
+        <input type="checkbox" name="reminder" id="reminder" [(ngModel)]="reminder"/>
+    </div>
+    {{text}}
+    <input type="submit" value="Guardar este juego" class="btn btn-block"/>
+</form>
